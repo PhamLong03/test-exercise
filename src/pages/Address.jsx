@@ -22,14 +22,11 @@ function Address() {
       setToast('Log in successfully')
       setData(res.data.data)
       notifySuccess(toast)
-      console.log('sucss',toast);
-
     })
     .catch((error)=>{
       if (error.response.status == 401) {
         setToast('Unauthorized')
         notifyError(toast)
-        console.log(toast);
       }
     })
   }, []);
